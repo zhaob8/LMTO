@@ -1,0 +1,45 @@
+#### initial parameters I/O ####
+SYSTEM = Li4Ti5O12111acid 
+ISTART = 1 
+ICHARG = 1 
+LWAVE = .TRUE. 
+LCHARG = .TRUE.
+LVTOT = .FALSE.
+LVHAR = .FALSE.
+LELF = .FALSE.
+ICHARG = 11
+LORBIT = 11
+#### Electronic Relaxation ####
+ENCUT = 420 
+ISMEAR = -5 
+SIGMA = 0.05 
+EDIFF = 1E-5 
+NELMIN = 5 
+NELM = 300  
+GGA = PE 
+LREAL = .FALSE  # material .FALSE surface AUTO 
+# LDIPOL = .TRUE.
+# IDIPOL = 3 # material no ,surface 3
+ISYM = 0 # crystal 2, surface 0
+
+
+#### Geo opt ####
+EDIFFG = -0.01
+IBRION = -1 
+POTIM = 0.2  
+NSW = 0 # maxmium step
+ISIF = 2 # stress tensor
+
+#### Mag ####
+# ISPIN = 2
+# MAGMOM = 5.0 5.0 5.0 5.0 6*0.0
+
+#### DFT + U ####
+LDAU = .TRUE.
+LDAUTYPE = 2
+LDAUL =   2  -1  2   -1   
+LDAUU =  2.5 0.0 3.5 0.0
+LDAUJ =  0.0 0.0 0.0 0.0   
+LDAUPRINT = 2
+LMAXMIX = 4 #d area 4 ,f area 6
+
